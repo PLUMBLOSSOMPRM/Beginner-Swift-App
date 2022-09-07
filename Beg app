@@ -1,0 +1,23 @@
+import SwiftUI
+
+struct ContentView: View {
+    let names = ["Sung JinWoo", "Athanasia", "Jennette"]
+    
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                ForEach(names, id: \.self) { name in Button {
+                } label:
+                    Image(name)
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                }
+            }
+            .navigationTitle("ManhwaCharacters")
+        }
+    .navigationViewStyle(.stack)
+        }
+    }
+/
